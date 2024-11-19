@@ -1,5 +1,6 @@
 const firestore = require('../config/database');
 
+// Mendapatkan rekomendasi gaya hidup sehat
 const getRecommendations = async (req, res) => {
     try {
         // Contoh fetch dari Firestore
@@ -12,6 +13,7 @@ const getRecommendations = async (req, res) => {
     }
 };
 
+// Menambahkan data pengguna
 const addUserData = async (req, res) => {
     try {
         const { userId, healthData } = req.body;
