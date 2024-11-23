@@ -44,3 +44,6 @@ sequelize.authenticate()
     console.error('Unable to connect to the database:', err.message);
     process.exit(1); // Keluar jika tidak bisa terkoneksi dengan database
   });
+
+//
+  module.exports = app;
