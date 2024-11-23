@@ -18,6 +18,10 @@ app.use(cors()); // Optional: Mengaktifkan CORS
 app.use('/api/auth', authRoutes);
 app.use('/api/health', healthRoutes);
 
+app.get("/", (req, res) => {
+  res.json({ data: "Hello"});
+});
+
 // Error Handling Middleware
 app.use(errorHandler);
 
