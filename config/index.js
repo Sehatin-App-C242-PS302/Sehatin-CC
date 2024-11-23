@@ -15,6 +15,7 @@
 // };
 
 require('dotenv').config();
+const mysql2 = require('mysql2'); // ini tambahan juga
 
 module.exports = {
   db: {
@@ -22,8 +23,9 @@ module.exports = {
     password: process.env.DB_PASSWORD || '',
     database: process.env.DB_NAME || 'sehatin-db',
     host: process.env.DB_HOST || '127.0.0.1',
-    port: process.env.DB_PORT || 3306, // Default MySQL port
+    port: process.env.DB_PORT || 3307,
     dialect: 'mysql',
+    dialectModule: 'mysql2', //ini tambahan
   },
   server: {
     port: process.env.PORT || 3000,
@@ -31,33 +33,4 @@ module.exports = {
 };
 
 
-// ====
-// require('dotenv').config(); // Mengambil variabel lingkungan dari file .env
-
-// module.exports = {
-//   development: {
-//     username: process.env.DB_USER || 'root', // Default ke root jika tidak diatur
-//     password: process.env.DB_PASSWORD || '', // Default kosong jika tidak diatur
-//     database: process.env.DB_NAME || 'sehatin-db', // Nama database
-//     host: process.env.DB_HOST || '127.0.0.1', // Host database
-//     port: process.env.DB_PORT || 3307, // Port database
-//     dialect: 'mysql', // Dialek untuk database
-//   },
-//   test: {
-//     username: process.env.DB_USER || 'root',
-//     password: process.env.DB_PASSWORD || '',
-//     database: process.env.TEST_DB_NAME || 'test-db',
-//     host: process.env.DB_HOST || '127.0.0.1',
-//     port: process.env.DB_PORT || 3307,
-//     dialect: 'mysql',
-//   },
-//   production: {
-//     username: process.env.DB_USER || 'root',
-//     password: process.env.DB_PASSWORD || '',
-//     database: process.env.PROD_DB_NAME || 'prod-db',
-//     host: process.env.DB_HOST || '127.0.0.1',
-//     port: process.env.DB_PORT || 3307,
-//     dialect: 'mysql',
-//   },
-// };
 
