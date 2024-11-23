@@ -15,7 +15,7 @@
 // };
 
 require('dotenv').config();
-const mysql2 = require('mysql2'); // ini tambahan juga
+// const mysql2 = require('mysql2'); // ini tambahan juga
 
 module.exports = {
   db: {
@@ -25,7 +25,7 @@ module.exports = {
     host: process.env.DB_HOST || '127.0.0.1',
     port: process.env.DB_PORT || 3307,
     dialect: 'mysql',
-    dialectModule: 'mysql2', //ini tambahan
+    // dialectModule: 'mysql2', //ini tambahan
   },
   server: {
     port: process.env.PORT || 3000,
