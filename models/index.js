@@ -8,20 +8,20 @@ const config = require('../config').db;
 const basename = path.basename(__filename);
 const db = {};
 
-// Membuat koneksi Sequelize
+// Koneksi sequelize lur
 const sequelize = new Sequelize(
   config.database,
   config.username,
   config.password,
   {
     host: config.host,
-    port: config.port, // Menambahkan port jika diperlukan
+    port: config.port, 
     dialect: config.dialect,
-    logging: console.log, // Anda dapat menonaktifkan log query dengan `false`
+    logging: console.log, // bisa dinonaktifkan log query dengan `false`
   }
 );
 
-// Membaca semua file model di folder models
+// read semua file model di folder models
 fs.readdirSync(__dirname)
   .filter((file) => {
     return (
