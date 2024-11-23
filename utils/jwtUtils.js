@@ -14,6 +14,7 @@ const jwt = require('jsonwebtoken');
 // Mengambil JWT_SECRET dari variabel lingkungan (.env)
 const jwtSecret = process.env.JWT_SECRET;
 
+// Fungsi untuk membuat token
 const generateToken = (userId) => {
   // Periksa apakah JWT_SECRET sudah terdefinisi
   if (!jwtSecret) {
@@ -24,18 +25,20 @@ const generateToken = (userId) => {
   return jwt.sign({ id: userId }, jwtSecret, { expiresIn: '1d' }); // Token akan kedaluwarsa dalam 1 hari
 };
 
-module.exports = { generateToken };
+// Fungsi untuk memverifikasi token dan mengambil informasi user
+const verifyToken = (token) => {
+  if (!token) {
+    throw new Error('Token is required');
+  }
 
+  try {
+    // Verifikasi token
+    const decoded = jwt.verify(token, jwtSecret); // Dekode token dengan secret key
+    return decoded; // Mengembalikan informasi user yang didekode
+  } catch (err) {
+    throw new Error('Invalid or expired token');
+  }
+};
 
+module.exports = { generateToken, verifyToken };
 
-// ====
-// const jwt = require('jsonwebtoken');
-
-// // Mengambil JWT_SECRET dari variabel lingkungan (.env)
-// const jwtSecret = process.env.JWT_SECRET;
-
-// const generateToken = (userId) => {
-//   return jwt.sign({ id: userId }, jwtSecret, { expiresIn: '1d' }); // Token akan kedaluwarsa dalam 1 hari
-// };
-
-// module.exports = { generateToken };

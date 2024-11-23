@@ -42,6 +42,13 @@ Object.keys(db).forEach((modelName) => {
   }
 });
 
+// Menambahkan relasi antara User dan HealthProfile
+// User hasMany HealthProfiles
+if (db.User && db.HealthProfile) {
+  db.User.hasMany(db.HealthProfile, { foreignKey: 'userId' });
+  db.HealthProfile.belongsTo(db.User, { foreignKey: 'userId' });
+}
+
 // Menambahkan sequelize instance dan library ke objek db
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;

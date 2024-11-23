@@ -1,7 +1,18 @@
 module.exports = {
-    USER_NOT_FOUND: 'User not found',
-    INVALID_PASSWORD: 'Invalid password',
-    REGISTER_SUCCESS: 'User registered successfully!',
-    LOGIN_SUCCESS: 'Login successful!',
-  };
-  
+  // Auth messages
+  USER_NOT_FOUND: 'User tidak ditemukan',
+  INVALID_PASSWORD: 'Password tidak valid',
+  REGISTER_SUCCESS: 'Registrasi berhasil!',
+  LOGIN_SUCCESS: 'Login berhasil!',
+
+  // Token-related messages
+  NO_TOKEN_PROVIDED: 'Token tidak disediakan',
+  INVALID_TOKEN: 'Token tidak valid',
+
+  // Health-related messages
+  HEALTH_RECORD_CREATED: 'Data kesehatan berhasil dibuat!',
+  HEALTH_RECORD_FETCHED: 'Data kesehatan berhasil diambil!',
+  HEALTH_RECORD_NOT_FOUND: 'Data kesehatan tidak ditemukan!',
+  HEALTH_RECORD_UPDATED: 'Data kesehatan berhasil diperbarui!',
+  HEALTH_RECORD_DELETED: 'Data kesehatan berhasil dihapus!',
+};
