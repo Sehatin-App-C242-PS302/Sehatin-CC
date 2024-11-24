@@ -24,6 +24,7 @@ const config = {
     host: process.env.DB_HOST || 'mysql-sehatin-sehatin-cc.b.aivencloud.com',
     port: process.env.DB_PORT || 14744,
     dialect: 'mysql',
+    dialectModule: require('mysql2'),
     dialectOptions: {
       ssl: {
         rejectUnauthorized: false, // Dibutuhkan untuk koneksi aman ke Aiven
