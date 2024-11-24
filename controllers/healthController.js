@@ -7,7 +7,8 @@ const createHealthProfile = async (req, res, next) => {
     const { gender, age, height, weight, date, userId } = req.body;
 
     // Hitung BMI
-    const bmi = weight / (height * height);
+    const heightInMeters = height / 100;
+    const bmi = weight / (heightInMeters * heightInMeters);
 
     // Simpan data ke database
     const healthProfile = await HealthProfile.create({
