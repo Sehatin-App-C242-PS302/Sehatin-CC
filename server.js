@@ -15,6 +15,7 @@ app.use('/favicon.ico', express.static('path/to/favicon.ico')); //ini nyoba solv
 
 // Middleware
 app.use(express.json()); // Parsing JSON
+app.use(express.urlencoded({ extended: true })); // Parsing URL-encoded
 app.use(cors()); // Optional: Aktifkan CORS jika diperlukan
 
 // Routes
@@ -22,7 +23,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/health', healthRoutes);
 
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to the API!" });
+  res.json({ message: "Welcome to the API! Sehat, sehat, sehatin" });
 });
 
 // Error Handling Middleware
