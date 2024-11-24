@@ -48,7 +48,8 @@ const updateHealthProfile = async (req, res, next) => {
     const { gender, age, height, weight } = req.body;
 
     // Hitung ulang BMI
-    const bmi = weight / (height * height);
+    const heightInMeters = height / 100;
+    const bmi = weight / (heightInMeters * heightInMeters);
 
     // Update profil kesehatan
     const [updated] = await HealthProfile.update(
