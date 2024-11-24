@@ -1,0 +1,45 @@
+{
+    "development": {
+      "username": "avnadmin",
+      "password": "AVNS_rN_y8dcYawia_QxZKhP",
+      "database": "defaultdb",
+      "host": "mysql-sehatin-sehatin-cc.b.aivencloud.com",
+      "port": 14744,
+      "dialect": "mysql",
+      "dialectModule": "mysql2",
+      "dialectOptions": {
+        "ssl": {
+          "rejectUnauthorized": false
+        }
+      }
+    },
+    "test": {
+      "username": "avnadmin",
+      "password": "AVNS_rN_y8dcYawia_QxZKhP",
+      "database": "defaultdb",
+      "host": "mysql-sehatin-sehatin-cc.b.aivencloud.com",
+      "port": 14744,
+      "dialect": "mysql",
+      "dialectModule": "mysql2",
+      "dialectOptions": {
+        "ssl": {
+          "rejectUnauthorized": false
+        }
+      }
+    },
+    "production": {
+      "username": "avnadmin",
+      "password": "AVNS_rN_y8dcYawia_QxZKhP",
+      "database": "defaultdb",
+      "host": "mysql-sehatin-sehatin-cc.b.aivencloud.com",
+      "port": 14744,
+      "dialect": "mysql",
+      "dialectModule": "mysql2",
+      "dialectOptions": {
+        "ssl": {
+          "rejectUnauthorized": false
+        }
+      }
+    }
+  }
+  
