@@ -6,9 +6,12 @@ const healthRoutes = require('./routes/health');
 const errorHandler = require('./middlewares/errorHandler');
 const cors = require('cors'); // Optional: Untuk CORS
 
+
 const { server } = require('./config'); // Konfigurasi server dan database
 
 const app = express();
+
+app.use('/favicon.ico', express.static('path/to/favicon.ico')); //ini nyoba solve error yang favicon
 
 // Middleware
 app.use(express.json()); // Parsing JSON
