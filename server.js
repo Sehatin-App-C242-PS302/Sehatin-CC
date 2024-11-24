@@ -33,7 +33,7 @@ const startServer = async () => {
     console.log('Database connection established successfully.');
 
     console.log('Synchronizing database...');
-    await sequelize.sync({ alter: true }); // Gunakan `alter: true` untuk menghindari penghapusan data
+    await sequelize.sync({ alter: true }); // Gunakan alter: true untuk menghindari penghapusan data
 
     // Jalankan server
     app.listen(server.port, () => {
@@ -45,5 +45,6 @@ const startServer = async () => {
   }
 };
 
-// Jalankan fungsi startServer
-startServer();
+// Ekspor app dan startServer untuk digunakan oleh Vercel
+module.exports = app;
+module.exports.startServer = startServer;
