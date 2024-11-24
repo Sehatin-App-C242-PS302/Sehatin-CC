@@ -11,28 +11,28 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    umur: {
+    age: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         min: 0,
       },
     },
-    tinggi: {
+    height: {
       type: DataTypes.FLOAT,
       allowNull: false,
       validate: {
         min: 0,
       },
     },
-    berat: {
+    weight: {
       type: DataTypes.FLOAT,
       allowNull: false,
       validate: {
         min: 0,
       },
     },
-    BMI: {
+    bmi: {
       type: DataTypes.FLOAT,
       allowNull: false,
       validate: {
@@ -50,7 +50,7 @@ module.exports = (sequelize) => {
     createdAt: {
       type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: DataTypes.NOW, // Nilai default sekarang
+      defaultValue: DataTypes.NOW,
     },
   });
 

@@ -15,7 +15,7 @@ app.use('/favicon.ico', express.static('path/to/favicon.ico')); //ini nyoba solv
 
 // Middleware
 app.use(express.json()); // Parsing JSON
-app.use(express.urlencoded({ extended: true })); // Parsing URL-encoded
+app.use(express.urlencoded({ extended: true })); // nambahin agar bisa pake url encoded saat testing api (postman)
 app.use(cors()); // Optional: Aktifkan CORS jika diperlukan
 
 // Routes
