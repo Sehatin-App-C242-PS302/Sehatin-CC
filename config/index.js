@@ -2,35 +2,41 @@
 
 // module.exports = {
 //   db: {
-//     username: process.env.DB_USER,
-//     password: process.env.DB_PASSWORD,
-//     database: process.env.DB_NAME,
-//     host: process.env.DB_HOST,
+//     username: process.env.DB_USER || 'avnadmin',
+//     password: process.env.DB_PASSWORD || 'AVNS_rN_y8dcYawia_QxZKhP',
+//     database: process.env.DB_NAME || 'defaultdb',
+//     host: process.env.DB_HOST || 'http://mysql-sehatin-sehatin-cc.b.aivencloud.com/',
+//     port: process.env.DB_PORT || 14744,
 //     dialect: 'mysql',
 //   },
-//   jwtSecret: process.env.JWT_SECRET,
 //   server: {
-//     port: process.env.PORT || 3307,
+//     port: process.env.PORT || 14744,
 //   },
 // };
 
 require('dotenv').config();
-// const mysql2 = require('mysql2'); // ini tambahan juga
 
-module.exports = {
+const config = {
   db: {
-    username: process.env.DB_USER || 'root',
-    password: process.env.DB_PASSWORD || '',
-    database: process.env.DB_NAME || 'sehatin-db',
-    host: process.env.DB_HOST || '127.0.0.1',
-    port: process.env.DB_PORT || 3307,
+    username: process.env.DB_USER || 'avnadmin',
+    password: process.env.DB_PASSWORD || 'AVNS_rN_y8dcYawia_QxZKhP',
+    database: process.env.DB_NAME || 'defaultdb',
+    host: process.env.DB_HOST || 'mysql-sehatin-sehatin-cc.b.aivencloud.com',
+    port: process.env.DB_PORT || 14744,
     dialect: 'mysql',
-    // dialectModule: 'mysql2', //ini tambahan
+    dialectModule: require('mysql2'),
+    dialectOptions: {
+      ssl: {
+        rejectUnauthorized: false, // Dibutuhkan untuk koneksi aman ke Aiven
+      },
+    },
   },
   server: {
-    port: process.env.PORT || 3000,
+    port: process.env.PORT || 3000, // Port aplikasi
   },
 };
+
+module.exports = config;
 
 
 

@@ -1,5 +1,5 @@
 const { HealthProfile } = require('../models');
-const { verifyToken } = require('../utils/jwtutils');
+const { verifyToken } = require('../utils/jwtUtils');
 
 // Method untuk membuat Health Profile baru
 const createHealthProfile = async (req, res, next) => {
