@@ -21,31 +21,27 @@ module.exports = {
   },
 
   async login(req, res, next) {
-  try {
-    const { email, password } = req.body;
-    const { user, token } = await loginUser(email, password);
-
-    // Ambil data "bersih" dari instance user
-    const userData = user.get();
-
-    // Tambahkan token ke dalam data user
-    userData.token = token;
-
-    res.status(200).json({
-      success: true,
-      message: LOGIN_SUCCESS,
-      user: {
-        dataValues: userData, // Kembali ke struktur sebelumnya
-      },
-    });
-  } catch (error) {
-    res.status(401).json({
-      success: false,
-      message: error.message,
-    });
-    next(error);
-  }
-}
+    try {
+      const { email, password } = req.body;
+      const { user, token } = await loginUser(email, password);
+  
+      // Ambil data "bersih" dari instance user tanpa properti tambahan
+      const userData = user.get(); 
+  
+      res.status(200).json({
+        success: true,
+        message: LOGIN_SUCCESS,
+        token: token, // Token ditempatkan sejajar dengan success dan message
+        user: userData, // Langsung kembalikan data user tanpa dataValues
+      });
+    } catch (error) {
+      res.status(401).json({
+        success: false,
+        message: error.message,
+      });
+      next(error);
+    }
+  }  
 }
 
   
