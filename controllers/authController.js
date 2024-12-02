@@ -31,8 +31,8 @@ module.exports = {
       res.status(200).json({
         success: true,
         message: LOGIN_SUCCESS,
-        user: userData, // Langsung kembalikan data user tanpa dataValues
         token: token, // Token ditempatkan sejajar dengan success dan message
+        user: userData, // Langsung kembalikan data user tanpa dataValues
       });
     } catch (error) {
       res.status(401).json({
