@@ -49,6 +49,12 @@ if (db.User && db.HealthProfile) {
   db.HealthProfile.belongsTo(db.User, { foreignKey: 'userId' });
 }
 
+// Menambahkan relasi antara User dan Prediction
+if (db.User && db.Prediction) {
+  db.User.hasMany(db.Prediction, { foreignKey: 'userId' });
+  db.Prediction.belongsTo(db.User, { foreignKey: 'userId' });
+}
+
 // Menambahkan sequelize instance dan library ke objek db
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;

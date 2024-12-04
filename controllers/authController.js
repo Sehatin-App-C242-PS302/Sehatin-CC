@@ -9,7 +9,7 @@ module.exports = {
       res.status(201).json({ 
         success: true, 
         message: REGISTER_SUCCESS, 
-        user // langsung menyertakan user di bawah message
+        // user // langsung menyertakan user di bawah message
       });
     } catch (error) {
       res.status(400).json({ 
@@ -20,7 +20,7 @@ module.exports = {
     }
   },
 
-  async login(req, res, next) {
+  async login(req, res, next) { // sudah benar
     try {
       const { email, password } = req.body;
       const { user, token } = await loginUser(email, password);

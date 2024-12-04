@@ -3,6 +3,7 @@ const express = require('express');
 const { sequelize } = require('./models');
 const authRoutes = require('./routes/auth');
 const healthRoutes = require('./routes/health');
+const predictionsRoutes = require('./routes/predictions');
 const errorHandler = require('./middlewares/errorHandler');
 const cors = require('cors'); // Optional: Untuk CORS
 
@@ -20,6 +21,7 @@ app.use(cors()); // Optional: Aktifkan CORS jika diperlukan
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/health', healthRoutes);
+app.use('/api/predictions', predictionsRoutes);
 
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to the API! Sehat, sehat, sehatin" });
