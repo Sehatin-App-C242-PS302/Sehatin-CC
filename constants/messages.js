@@ -6,8 +6,10 @@ module.exports = {
   LOGIN_SUCCESS: 'Login berhasil!',
 
   // Token-related messages
-  NO_TOKEN_PROVIDED: 'Token tidak disediakan',
-  INVALID_TOKEN: 'Token tidak valid',
+  NO_TOKEN_PROVIDED: 'No token provided',
+  INVALID_TOKEN: 'Invalid token',
+  USER_NOT_AUTHORIZED: 'Unauthorized access attempt in middleware.',
+  PREDICTIONS_NOT_FOUND: 'Predictions not found',
 
   // Health-related messages
   HEALTH_RECORD_CREATED: 'Data kesehatan berhasil dibuat!',

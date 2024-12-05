@@ -1,22 +1,10 @@
-// const express = require('express');
-// const { getPredictionsByUserId } = require('../controllers/predictionsController');
-// const authMiddleware = require('../middlewares/authMiddleware');
-
-// const router = express.Router();
-
-// // Rute untuk mendapatkan prediksi berdasarkan user_id
-// router.get('/user/:user_id', authMiddleware, getPredictionsByUserId);
-
-// module.exports = router;
-
 const express = require('express');
 const { getPredictionsByUserId } = require('../controllers/predictionsController');
 const authMiddleware = require('../middlewares/authMiddleware');
-const predictionsMiddleware = require('../middlewares/predictionsMiddleware'); // Middleware baru
 
 const router = express.Router();
 
-// Rute untuk mendapatkan prediksi berdasarkan user_id dengan middleware tambahan
-router.get('/user/:user_id', authMiddleware, predictionsMiddleware, getPredictionsByUserId);
+// Rute untuk mendapatkan prediksi berdasarkan user_id
+router.get('/user/:user_id', authMiddleware, getPredictionsByUserId);
 
 module.exports = router;
