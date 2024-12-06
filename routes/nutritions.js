@@ -1,10 +1,10 @@
 const express = require('express');
-const { getPredictions } = require('../controllers/nutritionsController');
+const { getUserNutritions } = require('../controllers/nutritionsController');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 const router = express.Router();
 
-// Endpoint untuk mendapatkan prediksi berdasarkan userId
-router.get('/image', authMiddleware, getPredictions);
+// Endpoint untuk mendapatkan data nutrisi berdasarkan userId
+router.get('/image', authMiddleware, getUserNutritions);
 
 module.exports = router;
