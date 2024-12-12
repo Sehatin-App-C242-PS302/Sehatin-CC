@@ -29,5 +29,14 @@ By utilizing cloud computing technology, Sehatin can process user data faster an
 </ul>
 
 <h1><u>Installation and Configuration</u></h1>
-<ul>
-<li><b><div oncopy="https://github.com/Sehatin-App-C242-PS302/Sehatin-CC">Clone the repository:</b></li> </div>
+<ol>
+<li><b>Clone the repository:</b>
+  <pre>https://github.com/Sehatin-App-C242-PS302/Sehatin-CC</pre></li>
+<li><b>Create and activate virtual environment:</b>
+<pre>python -m venv venv
+source venv/bin/activate</pre>
+<li><b>Install dependencies:</b></li>
+<pre>pip install -r requirements.txt</pre>
+<li><b>Run the app:</b></li>
+<pre>
+</ol>
