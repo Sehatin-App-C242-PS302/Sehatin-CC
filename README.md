@@ -38,5 +38,5 @@ source venv/bin/activate</pre>
 <li><b>Install dependencies:</b></li>
 <pre>pip install -r requirements.txt</pre>
 <li><b>Run the app:</b></li>
-<pre>
+<pre>npm start server.js</pre>
 </ol>
