@@ -3,6 +3,7 @@
 By utilizing cloud computing technology, Sehatin can process user data faster and more accurately, perform more comprehensive food nutrition analysis, and provide more personalized and effective daily activity recommendations. Cloud computing services such as Google CloudSQL, Google Cloud Run, and Cloud Storage enable Sehatin to provide a better and more scalable user experience.
 
 <h2><u>ML Model API Repository:</u></h2>
+<li>https://github.com/Sehatin-App-C242-PS302/Sehatin-CC-DeployModel.git<li>
 <li>https://github.com/Sehatin-App-C242-PS302/sehatin-cc-model1.git (model 1 fix)</li> 
 <li>https://github.com/Sehatin-App-C242-PS302/Sehatin-CC-Deploy-Model2.git (model 2 fix)</li> 
 
