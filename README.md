@@ -4,7 +4,7 @@ By utilizing cloud computing technology, Sehatin can process user data faster an
 
 <h2><u>ML Model API Repository:</u></h2>
 <li>https://github.com/Sehatin-App-C242-PS302/Sehatin-CC-DeployModel.git<li>
-<li>https://github.com/Sehatin-App-C242-PS302/sehatin-cc-model1.git</li> (model 1 fix) 
+<li>https://github.com/Sehatin-App-C242-PS302/sehatin-cc-model1.git (model 1 fix)</li> 
 <li>https://github.com/Sehatin-App-C242-PS302/Sehatin-CC-Deploy-Model2.git</li> 
 
 <h1><u>System Architecture</u></h1>
